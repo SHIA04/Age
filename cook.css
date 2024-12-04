@@ -1,0 +1,72 @@
+#grab {
+    position: absolute;
+    right: 550px;
+    top: 445px;
+    width: 190px;
+    height: 45px;
+    border: 0;
+    background-color: #f4fffd;
+    outline: none;
+}
+
+#eval {
+    position: absolute;
+    right: 559px;
+    top: 515px;
+    background-color: #0b0809;
+    color: #f4fffd;
+    height: 50px;
+    width: 180px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 0;
+}
+
+#eval:hover {
+    background-color: #f4fffd;
+    color: #0b0809;
+}
+
+#changeme {
+    position: absolute;
+    opacity: 0;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    left: 500px;
+    top: 700px;
+}
+
+#child {
+    position: absolute;
+    height: 625px;
+    width: 625px;
+    right: 1020px;
+    bottom: 180px;
+    opacity: 0;
+}
+
+#teen {
+    position: absolute;
+    height: 625px;
+    width: 625px;
+    right: 1020px;
+    bottom: 180px;
+    opacity: 0;
+}
+
+#adult {
+    position: absolute;
+    height: 625px;
+    width: 625px;
+    right: 1020px;
+    bottom: 180px;
+    opacity: 0;
+}
+#grand {
+    position: absolute;
+    height: 625px;
+    width: 625px;
+    right: 1020px;
+    bottom: 180px;
+    opacity: 0;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Project PLF</title>
+    <link rel="stylesheet" href="cook.css">
+</head>
+
+<body style="background-color: #fff6ed;">
+
+    <!-- images -->
+    <!-- img Holder -->
+    <img src="customMade.png" style=" position: relative; height: 800px; width: 800px;   left: 850px; top: 50px;">
+
+    <!-- imgs -->
+    <img src="child.png" id="child">
+    <img src="teen.png" id="teen">
+    <img src="adult.png" id="adult">
+    <img src="grand.png" id="grand">
+
+    <!-- asset -->
+    <input id="grab" placeholder="Enter your age">
+    <button onclick="process()" id="eval">Evaluate</button>
+    <h1 id="changeme">output</h1>
+    </img>
+
+
+</body>
+
+
+
+
+<script>
+
+    // *ignore*  Startup Initializing
+    do {
+        alert("Welcome to Age Verification Web, where this program will identify your age classification. Ranging to : Child, Teenager, Adult, And Senior");
+        alert("Note: Enter numbers that are positive. Anything less than or in the range of negative will be considered as yet to be born or invalid.");
+
+        var checkin = prompt("To assure that this note has been read, type 'P' to proceed", "Enter Here");
+
+        if (checkin !== "P") {
+            alert("You did not type 'P'. Please try again.");
+        }
+    } while (checkin !== "P");
+
+    alert("Thank you! you may now proceed.");
+
+
+
+
+    // Begin
+    // Declaration
+    var age
+
+    // Module; Proccess
+    function process() {
+        age = document.getElementById("grab").value;
+
+        // Reminder; Empty
+        if (age === "") {
+            alert("Valid classifications to enter: 0-12 Child; 13-19 Teenager; 20-64 Adult; 65 above Senior.");
+        }
+
+
+
+        //   Age Checker  with txt, img
+
+             // section child
+        else if (age >= 0 && age <= 12) {
+            document.getElementById("changeme").innerHTML = "Child";
+            document.getElementById("changeme").style.opacity = "1";
+
+            document.getElementById("child").style.opacity = "1";
+            document.getElementById("teen").style.opacity = "0";
+            document.getElementById("adult").style.opacity = "0";
+            document.getElementById("grand").style.opacity = "0";
+    
+    // post-loop
+    do {
+    directory = prompt("Age " + age + " is classified as child. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+
+
+    if ( directory === "C" ) {
+        alert("Thank you for using this program!");
+        window.close();
+        break;
+         }
+    else if ( directory === null ) {
+        directory = prompt("Age " + age + " is classified as child. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+    }
+} while (directory !== "Y");
+
+if (directory === "Y") {
+    alert("Thank you for continuing!");
+    
+}
+
+
+        }
+
+ // section teenager
+        else if (age >= 13 && age <= 19) {
+            document.getElementById("changeme").innerHTML = "Teenager";
+            document.getElementById("changeme").style.opacity = "1";
+
+            document.getElementById("child").style.opacity = "0";
+            document.getElementById("teen").style.opacity = "1";
+            document.getElementById("adult").style.opacity = "0";
+            document.getElementById("grand").style.opacity = "0";
+
+            // post-loop
+            do {
+    directory = prompt("Age " + age + " is classified as teenager. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+
+
+    if ( directory === "C" ) {
+        alert("Thank you for using this program!");
+        window.close();
+        break;
+         }
+    else if ( directory === null ) {
+        directory = prompt("Age " + age + " is classified as teenager. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+    }
+} while (directory !== "Y");
+
+if (directory === "Y") {
+    alert("Thank you for continuing!");
+    
+}
+        }
+// section adult
+        else if (age >= 20 && age <= 64) {
+            document.getElementById("changeme").innerHTML = "Adult";
+            document.getElementById("changeme").style.opacity = "1";
+
+            document.getElementById("child").style.opacity = "0";
+            document.getElementById("teen").style.opacity = "0";
+            document.getElementById("adult").style.opacity = "1";
+            document.getElementById("grand").style.opacity = "0";
+
+            // post-loop
+            do {
+    directory = prompt("Age " + age + " is classified as adult. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+
+
+    if ( directory === "C" ) {
+        alert("Thank you for using this program!");
+        window.close();
+        break;
+         }
+    else if ( directory === null ) {
+        directory = prompt("Age " + age + " is classified as adult. If you wish to continue                                      Type Y or Type C to close program", "Enter here");
+    }
+} while (directory !== "Y");
+
+if (directory === "Y") {
+    alert("Thank you for continuing!");
+    
+}
+        }
+// section senior
+        else if (age >= 65) {
+            document.getElementById("changeme").innerHTML = "Senior";
+            document.getElementById("changeme").style.opacity = "1";
+
+            document.getElementById("child").style.opacity = "0";
+            document.getElementById("teen").style.opacity = "0";
+            document.getElementById("adult").style.opacity = "0";
+            document.getElementById("grand").style.opacity = "1";
+
+            // post-loop
+            do {
+    directory = prompt("Age " + age + " is classified as senior. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+
+
+    if ( directory === "C" ) {
+        alert("Thank you for using this program!");
+        window.close();
+        break;
+         }
+    else if ( directory === null ) {
+        directory = prompt("Age " + age + " is classified as senior. If you wish to continue,                                      Type Y or Type C to close program", "Enter here");
+    }
+} while (directory !== "Y");
+
+if (directory === "Y") {
+    alert("Thank you for continuing!");
+    
+}
+        }
+
+
+        // Invalid ;section [ less than 0 (negative integer), Symbols, String]
+        else if (age < 0) {
+            alert("Invalid ;section [ less than 0 (negative integer), Symbols, String].      Please try again")
+        }
+
+        else {
+            alert("Invalid ;section [ less than 0 (negative integer), Symbols, String].      Please try again")
+        }
+    }
+</script>
+
+</html>
